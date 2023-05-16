@@ -24,6 +24,7 @@ int simpleVectorMatrix() {
     // example -> int idx = 0 * LIN*COL + 1
 
     printf("%d", mat[1]);
+    return 0;
 }
 
 int multipleVectorMatrix() {
@@ -68,6 +69,26 @@ int charTest() {
     return 0;
 }
 
+typedef struct person{
+    int age;
+    float weight;
+}tperson;
+
+typedef float real;
+
+int dynamicMemoryAccess(){
+    tperson *p;
+
+    p = (struct person*) malloc(sizeof (struct person));
+    p->age = 25;
+    p->weight =76.44;
+
+    printf("Age: %d ", p->age);
+    printf("\n");
+    printf("Weight: %.2f ", p->weight);
+
+    return 0;
+}
 
 int main() {
 
@@ -92,6 +113,12 @@ int main() {
 
     //Printing an array of characters, validating and printing only before the end of the array
     charTest();
+    printf("\n\n");
+    printf("--------------------------------------");
+    printf("\n");
+
+    //Dynamically accessing a pointer's memory address and printing its content
+    dynamicMemoryAccess();
     printf("\n\n");
     printf("--------------------------------------");
     printf("\n");
